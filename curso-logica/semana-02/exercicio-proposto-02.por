@@ -18,7 +18,7 @@ programa
 
 		se (media >= 7){
 			escreva("Aprovado")
-		}senao se (media >= 2 e media < 7){
+		}senao se (media >= 2){
 			escreva("Recuperação")
 		}senao{
 			escreva("Reprovado")
@@ -30,7 +30,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 481; 
+ * @POSICAO-CURSOR = 399; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
