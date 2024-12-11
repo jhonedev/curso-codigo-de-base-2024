@@ -8,9 +8,10 @@ programa
 	
 	funcao inicio()
 	{
-		cadeia produto
-		real valor, porcentagem, valorFrete
+		cadeia produto, estadoResidente
+		real valor, porcentagem
 		inteiro estado
+		real valorFrete = 0
 
 		escreva("Informe o nome do produto: ")
 		leia(produto)
@@ -24,22 +25,24 @@ programa
 			caso 1:
 				porcentagem = 0.10
 				valorFrete = calculaFrete(valor, porcentagem)
-				escreva("O frete para SP fica no valor de: ", valorFrete)
+				estadoResidente = "SP"
+				escreva("Produto: ", produto, ", valor: ", valor, ", estado: ", estadoResidente, ", valor do frete: ", valorFrete)
 				pare
 			caso 2:
 				porcentagem = 0.15
 				valorFrete = calculaFrete(valor, porcentagem)
-				escreva("O frete para MG fica no valor de: ", valorFrete)
+				estadoResidente = "MG"
+				escreva("Produto: ", produto, ", valor: ", valor, ", estado: ", estadoResidente, ", valor do frete: ", valorFrete)
 				pare
 			caso 3:
 				porcentagem = 0.20
 				valorFrete = calculaFrete(valor, porcentagem)
-				escreva("O frete para RJ fica no valor de: ", valorFrete)
+				estadoResidente = "RJ"
+				escreva("Produto: ", produto, ", valor: ", valor, ", estado: ", estadoResidente, ", valor do frete: ", valorFrete)
 				pare
 			caso contrario:
 				escreva("Não é possível entregar, retirar na loja.")
 		}
-		
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -47,7 +50,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 905; 
+ * @POSICAO-CURSOR = 798; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
