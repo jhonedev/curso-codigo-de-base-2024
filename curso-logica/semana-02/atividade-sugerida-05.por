@@ -1,46 +1,69 @@
 programa
 {
-	funcao real calculaAluguelCarro(inteiro distancia, real valorPorQuilometro){
-		
-		real aluguel = distancia * valorPorQuilometro
-
-	retorne aluguel
+	funcao real calculaAluguelCarro(inteiro distancia, real valorQuilometro)
+	{
+		real aluguel = distancia * valorQuilometro
+		retorne aluguel
 	}
 
-	funcao cadeia verificaCidade(cadeia cidade){
-		cadeia naoAtendida
-		
-		se (cidade != "Vitória" ou cidade != "Muriaé" ou cidade != "Niteroi" ou cidade != "Piracicaba"){
-			naoAtendida = "Cidade não atendida pela empresa"
-		}senao se (cidade == "Vitória"){
+	funcao cadeia verificaCidade(cadeia cidade)
+	{
+		cadeia mensagem = "Erro desconhecido"
+
+		se (cidade != "Vitória" e cidade != "Muriaé" e cidade != "Niteroi" e cidade != "Piracicaba")
+		{
+			mensagem = "Cidade não atendida pela empresa."
+		}
+		senao se (cidade == "Vitória")
+		{
 			inteiro distancia = 949
-			valorQuilometro = 2.20
-			calculaAluguelCarr.o(distancia, valorQuilometro
+			real valorQuilometro = 2.20
+			real custoAluguel = calculaAluguelCarro(distancia, valorQuilometro)
+			mensagem = "Cidade: " + cidade + ", Distância: " + distancia + " km, Custo do aluguel: R$ " + custoAluguel
+		}
+		senao se (cidade == "Muriaé")
+		{
+			inteiro distancia = 628
+			real valorQuilometro = 2.20
+			real custoAluguel = calculaAluguelCarro(distancia, valorQuilometro)
+			mensagem = "Cidade: " + cidade + ", Distância: " + distancia + " km, Custo do aluguel: R$ " + custoAluguel
+		}
+		senao se (cidade == "Niteroi")
+		{
+			inteiro distancia = 424
+			real valorQuilometro = 2.20
+			real custoAluguel = calculaAluguelCarro(distancia, valorQuilometro)
+			mensagem = "Cidade: " + cidade + ", Distância: " + distancia + " km, Custo do aluguel: R$ " + custoAluguel
+		}
+		senao se (cidade == "Piracicaba")
+		{
+			inteiro distancia = 168
+			real valorQuilometro = 2.20
+			real custoAluguel = calculaAluguelCarro(distancia, valorQuilometro)
+			mensagem = "Cidade: " + cidade + ", Distância: " + distancia + " km, Custo do aluguel: R$ " + custoAluguel
 		}
 
-		retorne naoAtendida 
+		retorne mensagem
 	}
 	
 	funcao inicio()
 	{
-
-		cadeia cidade
+		cadeia cidade, resultado
 	
-		escreva("Cidades disponiveis: 1 - Vitória, 2 - Muriaé, 3 - Niteroi, 4 - Piracicaba")
+		escreva("Cidades disponíveis:\nVitória\nMuriaé\nNiteroi\nPiracicaba\n")
 		escreva("Informe a cidade desejada: ")
 		leia(cidade)
-		verificaCidade(cidade)
-		
-
-		
+		resultado = verificaCidade(cidade)
+		escreva(resultado, "\n")
 	}
 }
+
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 502; 
+ * @POSICAO-CURSOR = 150; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
