@@ -4,7 +4,7 @@ programa
 	funcao inteiro tabuadaNormal(inteiro numero){
 		inteiro resultado, contador
 		
-		contador = 1
+		contador = 0
 		resultado  = 0
 
 		enquanto (contador <= 100){
@@ -22,7 +22,7 @@ programa
 		contador = 100
 		resultado  = 0
 
-		enquanto (contador >= 1){
+		enquanto (contador >= 0){
 			resultado = numero * contador
 			escreva(numero, " x ", contador, " = ", resultado, "\n")
 			contador--
@@ -53,9 +53,9 @@ programa
 		
 		escreva("Digite o numero da tabuada que deseja: ")
 		leia(numero)
-		tabuadaInvertida(numero)
-		tabuadaNormal(numero)
+		
 		tabuadaComPasso(numero)
+		
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -63,7 +63,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 979; 
+ * @POSICAO-CURSOR = 703; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
